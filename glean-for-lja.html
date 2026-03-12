@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Courier; -webkit-text-stroke: #000000; min-height: 16.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">* { box-sizing: border-box; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>"Segoe UI", sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: radial-gradient(circle at top left, #1a2850 0, #050816 45%, #02010b 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-main);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">a { color: var(--accent-soft); text-decoration: none; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.page {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>max-width: 1120px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 32px auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 24px 20px 40px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.shell {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>radial-gradient(circle at top left, rgba(255,255,255,0.08) 0, transparent 55%),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>radial-gradient(circle at bottom right, rgba(77,208,225,0.18) 0, transparent 60%),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>linear-gradient(135deg, rgba(255,255,255,0.08), rgba(10,15,35,0.98));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 1px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>box-shadow:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>0 24px 80px rgba(0,0,0,0.8),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>0 0 0 1px rgba(148,163,255,0.12);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.inner {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 23px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: radial-gradient(circle at top, #0a0f23 0, #050816 55%, #02010b 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 28px 28px 32px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.eyebrow {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: inline-flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 4px 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 999px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: rgba(15,23,42,0.85);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid rgba(148,163,255,0.4);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.12em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--accent-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 16px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.eyebrow-dot {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: 7px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>height: 7px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 999px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: radial-gradient(circle at 30% 30%, #fff 0, #ffb347 35%, #ff6b6b 75%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>box-shadow: 0 0 12px rgba(255,107,107,0.65);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.hero {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 32px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-items: flex-start;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0 0 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: clamp(28px, 3vw, 34px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.03em;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.hero-title-gradient {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: linear-gradient(110deg, #ffffff, #ffd4a3, #4dd0e1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>-webkit-background-clip: text;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background-clip: text;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: transparent;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.hero-sub {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>max-width: 520px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.5;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.pill-row {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 12px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.pill {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 3px 9px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 999px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid rgba(148,163,255,0.35);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: rgba(15,23,42,0.9);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--accent-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>white-space: nowrap;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.metric-card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 16px 16px 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: radial-gradient(circle at top left, rgba(255,255,255,0.08) 0, transparent 55%),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>linear-gradient(145deg, #050816, #0d1228);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid rgba(148,163,255,0.3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>box-shadow: 0 18px 50px rgba(0,0,0,0.7);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.metric-grid {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>grid-template-columns: repeat(3, minmax(0, 1fr));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 10px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.metric-label {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.14em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 4px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.metric-value {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.metric-caption {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 2px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.tagline {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 10px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.divider {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 22px 0 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-top: 1px solid rgba(148,163,255,0.25);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.section-grid {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>grid-template-columns: minmax(0, 2fr) minmax(0, 2.2fr) minmax(0, 2.1fr);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 18px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.section-title {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.18em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 8px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 12px 13px 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--card-bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid var(--border-soft);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.card h3 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0 0 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.card p {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0 0 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-muted);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.card ul {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding-left: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 6px 0 0;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.card li {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 2px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.accent {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--accent-soft);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.usecases {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>grid-template-columns: repeat(4, minmax(0, 1fr));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 6px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.usecase-card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 10px 10px 9px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: radial-gradient(circle at top, rgba(255,255,255,0.07) 0, rgba(5,8,22,0.98) 52%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid rgba(148,163,255,0.4);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.usecase-label {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.16em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--accent-2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 3px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.usecase-title {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 4px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.usecase-card ul {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 4px 0 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding-left: 14px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.usecase-card li {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 2px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.ref-grid {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>grid-template-columns: minmax(0, 2.2fr) minmax(0, 2.2fr) minmax(0, 2fr);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 8px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.ref-card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 10px 11px 9px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: #050816;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid rgba(148,163,255,0.35);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.ref-tag {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.16em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 3px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.ref-card h3 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0 0 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.ref-card p {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0 0 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-muted);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.ref-card ul {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 4px 0 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding-left: 14px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.ref-card li {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 2px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.footer-note {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--text-muted);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>opacity: 0.9;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">@media (max-width: 960px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>grid-template-columns: minmax(0, 1fr);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.metric-grid {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(3, minmax(0, 1fr));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.section-grid {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>grid-template-columns: minmax(0, 1fr);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.usecases {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(2, minmax(0, 1fr));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.ref-grid {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>grid-template-columns: minmax(0, 1fr);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">@media (max-width: 640px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.inner {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 20px 16px 22px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.metric-grid {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(2, minmax(0, 1fr));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.usecases {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>grid-template-columns: minmax(0, 1fr);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="hero"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Supercharge &lt;span class="hero-title-gradient"&gt;utilization, M&amp;amp;A integration, and AI impact&lt;/span&gt; at LJA.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="hero-sub"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>LJA is an employee-owned, multi-disciplinary firm with ~2,000 employees across eight sectors and 25+ acquisitions in the last two years — but knowledge lives in too many places, Copilot hasn’t delivered, and utilization is stuck near ~70%.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="pill-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="pill"&gt;Lift utilization 3–5 pts by shrinking “search tax” and rework&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="pill"&gt;Turn M&amp;amp;A sprawl into an integrated knowledge advantage&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="pill"&gt;Make AI useful beyond Office: engineers, IT, and pursuits&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="metric-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="section-title"&gt;North-star impact for LJA&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="metric-grid"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="metric-label"&gt;Engineer time&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="metric-value accent"&gt;+1–2 hrs / week&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="metric-caption"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>Per engineer by cutting time spent hunting for specs, drawings, and prior work — a 3–5% utilization lift in an employee-owned model.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="metric-label"&gt;Proposals &amp;amp; RFQs&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="metric-value accent"&gt;~50% faster&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="metric-caption"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>Auto-assemble resumes, project stories, and boilerplate from wins to raise throughput &amp;amp; win-rate with Land Dev &amp;amp; Public Works owners.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="metric-label"&gt;IT &amp;amp; AI ops&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="metric-value accent"&gt;L1/L2 deflection&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="metric-caption"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>Use Glean as the safe, enterprise AI layer for L1/L2 tickets, Copilot gaps, and AI experiments — governed centrally by IT &amp;amp; the AI Committee.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="tagline"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Glean becomes the AI “system of context” across LJA’s Microsoft estate, file servers, ProjectWise/Ignite, Freshservice, Salesforce, and more — so every engineer, PM, and pursuit team has the full story in one place.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;hr class="divider" /&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- LJA today / What Glean is / Outcome targets --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section class="section-grid"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;article class="card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="section-title"&gt;LJA today&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;High-performing, but constrained by knowledge friction&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="accent"&gt;Who LJA is.&lt;/span&gt; Employee-owned consulting engineering firm across the Southeast &amp;amp; Texas; ~2,000 employees across eight core sectors (Public Works, Transportation, Land Development, Energy, Environmental, Surveying, Rail). Land Development is the biggest revenue driver and highly influential.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="accent"&gt;How they grow.&lt;/span&gt; 25+ acquisitions over the last two years with more planned — mostly smaller regional firms with their own tech stacks, SharePoint sites, file servers, and engineering systems.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="accent"&gt;Where it hurts.&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;Utilization hovering around ~70% — much of the “missing” 30% is non-billable search, onboarding, and rework time.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;Knowledge fragmentation and “tribal knowledge” risk across autonomous BUs, regions, and acquired firms.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;Proposal velocity strain and desire to get more bids out, faster, without sacrificing quality.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;AI Committee has piloted Copilot for ~6 months with low adoption and unclear value; IT sees it as “very basic.”&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;L1/L2 ticket resolution is a 2026 priority for IT leadership, but knowledge is scattered across SharePoint, file shares, ProjectWise, Ignite, and Freshservice.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/article&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;article class="card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="section-title"&gt;What Glean is&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;The Work AI platform built for firms like LJA&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="accent"&gt;AI system of context.&lt;/span&gt; Glean unifies content, people, projects, and decisions in an Enterprise Graph — across M365, file servers, engineering repos, ticketing, CRM, and more — with real-time, permissions-aware security.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="accent"&gt;Search + Assistant + Agents.&lt;/span&gt; One interface where engineers can search, ask natural language questions, and trigger task-specific agents (e.g., “Find similar stormwater projects,” “Draft RFI response,” “Summarize spec changes since last issue”).</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="accent"&gt;Open and horizontal.&lt;/span&gt; 100+ connectors and actions, multi-LLM support, and an agent platform IT can govern — so LJA can bring its own tools, models, and partner ecosystem (e.g., Alchemy) into one AI fabric instead of betting everything on a single vendor’s walled garden.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="accent"&gt;Enterprise-grade security.&lt;/span&gt; Single-tenant architecture, real-time permission sync, and Glean Protect guardrails so AI only shows what a user is allowed to see — critical for regulated projects, client confidentiality, and cyber posture.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/article&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;article class="card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="section-title"&gt;Business outcome targets&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Translate AI into utilization, velocity, and risk reduction&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong&gt;+3–5 pts utilization&lt;/strong&gt; by giving every engineer back 1–2 billable hours per week through instant access to prior designs, calcs, and decisions instead of re‑creating work.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong&gt;50% faster proposal cycles&lt;/strong&gt; by auto-assembling resumes, relevant projects, and boilerplate from a unified knowledge base — matching what peer firms are already doing with Glean.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong&gt;IT &amp;amp; AI governance wins&lt;/strong&gt; by consolidating “random acts of AI” into a governed platform, reducing shadow-GPT usage and oversharing risk while enabling high-value agents.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;strong&gt;Faster value from acquisitions&lt;/strong&gt; by letting newly acquired teams search across legacy environments on day one, before tech stacks are fully rationalized.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/article&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;hr class="divider" /&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- High-value use cases --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="section-title"&gt;High-impact use cases for LJA&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="usecases"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;article class="usecase-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="usecase-label"&gt;Use case 01&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="usecase-title"&gt;Engineer productivity &amp;amp; utilization&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Unified search across specs, CAD/PDFs, RFIs, submittals, and past projects — regardless of which BU or acquisition they came from.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;“What did we do last time?” answers that pull in drawings, calcs, and narrative from similar projects with citations back to source docs.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Onboarding new engineers with self-service answers instead of constant interruptions to senior staff, lifting both parties’ utilization.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;article class="usecase-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="usecase-label"&gt;Use case 02&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="usecase-title"&gt;Proposals, RFQs &amp;amp; pursuits&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Auto-curate project write‑ups, resumes, and methods from prior wins by sector (e.g., Land Dev, Public Works, Transportation) into a first‑draft proposal package.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Reuse language and differentiators that worked for similar owners and project types instead of reinventing every time.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;RFP / SOQ agents that cut assembly time from days to hours while improving consistency and win rate — already live at peer firms.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;article class="usecase-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="usecase-label"&gt;Use case 03&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="usecase-title"&gt;M&amp;amp;A knowledge integration&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Search across legacy SharePoint, on‑prem file servers, and tools like ProjectWise/Ignite as if they were one system — without forcing immediate migrations.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Quickly surface experts, precedents, and standards from acquired firms so their know‑how becomes an asset, not a liability.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Reduce risk that key knowledge “walks out the door” when local leaders or niche specialists leave.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;article class="usecase-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="usecase-label"&gt;Use case 04&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="usecase-title"&gt;IT, support &amp;amp; safe AI adoption&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;L1/L2 support agent that suggests answers from Freshservice, runbooks, and prior tickets directly inside the help desk and Teams.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Governed alternative to ad‑hoc Copilot / GPT usage, with permissions, logging, and policy controls that meet LJA’s security bar.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Central AI hub IT can extend with new agents (e.g., spec/standard lookup, code compliance QA, “what changed between these drawings?”).&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;hr class="divider" /&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Lookalike customer stories --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="section-title"&gt;Lookalike stories LJA can point to&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="ref-grid"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;article class="ref-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="ref-tag"&gt;General contractor / consulting engineering peer&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h3&gt;McCarthy: from stalled Copilot trial to firm‑wide AI foundation&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>McCarthy, a large GC with heavy healthcare / education / infrastructure work, went from an underwhelming Copilot experience to a Glean deployment that became one of the most adopted tools in the company.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;North star:&lt;/strong&gt; shrink “bid to breaking ground” cycle time by ~75% by attacking knowledge &amp;amp; coordination bottlenecks.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Adoption:&lt;/strong&gt; grew from ~20 early users to wall‑to‑wall rollout (thousands of employees) within months, with &amp;gt;80% weekly active usage.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Time savings:&lt;/strong&gt; hours back per employee per week by reducing search and rework — across field, PM, and back‑office teams.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Agents LJA will care about:&lt;/strong&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;li&gt;Management System agent to interpret 2,000+ procedures and standards in real time.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;li&gt;CMiC ERP onboarding agent (YouTube‑style walkthroughs) used tens of thousands of times.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;li&gt;Benefits Q&amp;amp;A agent reducing HR question volume.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;li&gt;RFP automation and “SubScout” agents that assemble 10+ years of project history, contracts, and performance data into bid content in under an hour.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>This is the closest “storyboard” for LJA’s world: multi‑office, project‑driven, engineering‑centric, and initially disappointed by Copilot before pivoting to Glean.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;article class="ref-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="ref-tag"&gt;Power &amp;amp; infrastructure consulting engineering&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Firms like Sargent &amp;amp; Lundy &amp;amp; Thornton Tomasetti&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>In Glean’s AEC &amp;amp; engineering focus area, nuclear / power engineering leaders like Sargent &amp;amp; Lundy and structural specialists like Thornton Tomasetti show how Work AI can operate in highly regulated, safety‑critical environments.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Unifying drawings, specs, codes, and procedures across nuclear, grid, and conventional power portfolios while respecting strict permissioning and QA requirements.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Helping engineers answer “what did we do last time on a similar unit / structure?” with full traceability back to licensed calculations and approved designs.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;Supporting digital modernization programs and early AI initiatives without forcing engineers to change their core design tools overnight.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>These stories give LJA’s IT, safety, and sector leaders confidence that Work AI can be deployed responsibly in complex, regulated engineering contexts.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;article class="ref-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="ref-tag"&gt;Diversified industrial &amp;amp; M&amp;amp;A heavy&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Koch: using Glean to turn acquisitions into compounding value&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>Koch Industries uses Glean as an “Expert AI Assistant” across 1.2B+ documents, 15k knowledge workers, and 50+ enterprise systems — an extreme case of the M&amp;amp;A and BU fragmentation LJA is starting to feel.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Pre‑deal:&lt;/strong&gt; identify internal experts to vet new investment opportunities (e.g., wind, cyber) by searching skills and work history across the entire enterprise.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Post‑deal:&lt;/strong&gt; avoid rushing tech migrations by letting teams search across legacy and new environments on day one, accelerating value realization.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;strong&gt;Day‑to‑day:&lt;/strong&gt; help engineers and business teams bring new products to market ~20% faster by shrinking information‑retrieval and coordination time.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>For LJA’s pipeline of 20–30 acquisitions per year, Koch is a proof point that AI‑driven knowledge integration can scale without forcing every acquired firm into the same tools overnight.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="footer-note"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Note: Metrics and stories above are drawn from Glean customer materials and internal value hypotheses; tailor which proof points you use based on audience (e.g., executive, IT, or practice leaders) and confidentiality needs.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+</body>
+</html>
