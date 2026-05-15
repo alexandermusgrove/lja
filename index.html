@@ -368,4 +368,191 @@
       color: var(--lja-navy);
     }
 
- 
+    .proof-copy {
+      margin: 0;
+      color: var(--lja-muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding: 18px 6px 0;
+      color: var(--lja-muted);
+      font-size: 13px;
+      border-top: 1px solid var(--lja-line);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .two-col,
+      .proof-grid,
+      .outcomes {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header {
+        display: grid;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .shell { padding: 18px 14px 40px; }
+      .hero-inner,
+      .panel,
+      .proof-card,
+      .outcome-card { padding: 18px; }
+      .brand-logo { height: 34px; }
+      .brand-plus { font-size: 28px; }
+      h1 { font-size: 34px; }
+      .hero-sub { font-size: 16px; }
+      .logo-copy { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="brand-lockup">
+          <img class="brand-logo" src="LJA-Logo-Blue-Digital.png" alt="LJA logo" />
+          <span class="brand-plus">+</span>
+          <img class="brand-logo" src="glean-logo.png" alt="Glean logo" />
+        </div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1>LJA’s challenge and growth opportunity lies in turning acquisition-driven complexity into a business advantage.</h1>
+            <p class="hero-sub">Make knowledge reusable across business units, speed project delivery, and capture more value from the firm’s collective expertise.</p>
+          </div>
+          <aside class="stat-panel">
+            <div>
+              <div class="stat-label">Why it matters now</div>
+              <div class="metric-grid">
+                <div class="metric">
+                  <strong>70% utilization target</strong>
+                  <span>Utilization remains below target while engineers and PMC lose billable time to search, rework, and project context gaps.</span>
+                </div>
+                <div class="metric">
+                  <strong>Acquisition pace</strong>
+                  <span>New capabilities and customer relationships are being added faster than knowledge can be reused across the firm.</span>
+                </div>
+                <div class="metric">
+                  <strong>Governed AI</strong>
+                  <span>A cleaner, lower-risk path to enterprise AI than scattered tools, cleanup projects, or mass migrations.</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <p class="kicker">LJA today</p>
+          <h2></h2>
+        </div>
+      </div>
+      <div class="two-col">
+        <article class="panel logo-panel">
+          <div class="logo-wrap">
+            <img src="LJA-Logo-Blue-Digital.png" alt="LJA logo" />
+          </div>
+          <p class="logo-copy">Employee-owned, multi-disciplinary consulting engineering with expanding capabilities, stronger regional reach, and growing acquisition-driven complexity.</p>
+        </article>
+
+        <article class="panel">
+          <p class="kicker">The challenge</p>
+          <ul class="challenge-list">
+            <li>Knowledge is fragmented across business units, regions, acquired firms, and core systems.</li>
+            <li>Utilization remains below the 70% utilization target. Engineers and PMC lose billable hours to search, re-creating prior work, tracking project context, and finding the right experts.</li>
+            <li>Limited access to prior work and internal expertise constrains growth and profitability across offices and projects. Newly acquired firms may sub out work that could be done in-house.</li>
+            <li>Proposal work slows when teams have to hunt for project history, precedent, and the right SMEs.</li>
+            <li>Each acquisition adds value to the business, but compounds the knowledge challenge. LJA’s collective expertise keeps growing while the ability to use it across BUs slows.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <p class="kicker">What Glean is</p>
+          <h2>A governed AI system of context for a decentralized engineering firm.</h2>
+        </div>
+        <p class="subtle">Built for enterprises with many systems, strict security requirements, and internal processes that don’t live in one clean workflow.</p>
+      </div>
+      <div class="stack">
+        <article class="what-card">
+          <h4>AI system of context</h4>
+          <p>Glean connects LJA’s people, content, and systems so teams can find reliable answers faster across a fragmented environment.</p>
+        </article>
+        <article class="what-card">
+          <h4>Search, assistant, and agents</h4>
+          <p>One place to search, ask questions, and run task-specific workflows grounded in enterprise context.</p>
+        </article>
+        <article class="what-card">
+          <h4>Open and governed</h4>
+          <p>Glean helps LJA unlock value across Microsoft systems, file servers, CRM, ERP, legacy systems, and engineering knowledge sources without requiring cleanup projects or mass migrations.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <p class="kicker">3 outcomes to drive</p>
+          <h2>Ambitious outcomes tied to revenue, margin, and acquisition value.</h2>
+        </div>
+      </div>
+      <div class="outcomes">
+        <article class="outcome-card">
+          <div class="outcome-num">01</div>
+          <h4>Increase utilization, profitability, and revenue capacity</h4>
+          <p>Increase billable hours, reduce overhead, reduce overrun risk, and accelerate project delivery. Give engineers and PMC materially faster access to prior work, project context, and internal expertise so they work faster and with improved consistency.</p>
+        </article>
+        <article class="outcome-card">
+          <div class="outcome-num">02</div>
+          <h4>Accelerate sales growth and velocity</h4>
+          <p>Cut proposal and pursuit cycle times by making project history, resumes, and precedents reusable across offices and sectors. Help Marketing uncover more relevant projects, surface public-sector opportunities, and approach conferences and target accounts more strategically.</p>
+        </article>
+        <article class="outcome-card">
+          <div class="outcome-num">03</div>
+          <h4>Accelerate value of acquisitions</h4>
+          <p>Turn acquisitions into a compounding advantage, and accelerate return on the investment, by helping newly acquired teams find internal knowledge fast, keep more work in-house, and contribute value sooner.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <p class="kicker">Customer proof</p>
+          <h2>Proof that the model works in adjacent environments.</h2>
+        </div>
+      </div>
+      <div class="proof-grid">
+        <article class="proof-card">
+          <div class="proof-company">ConstructConnect</div>
+          <h4 class="proof-stat">29x ROI</h4>
+          <p class="proof-copy">Delivered $9M in productivity value, $1.5M in cost avoidance, and 20% fewer support requests.</p>
+        </article>
+        <article class="proof-card">
+          <div class="proof-company">Sargent &amp; Lundy</div>
+          <h4 class="proof-stat">2-3 hrs/wk saved per user</h4>
+          <p class="proof-copy">As part of the “AI for all” strategy, Glean is improving quality of output, in addition to time savings of roughly 2-3 hours per week per user on average.</p>
+        </article>
+        <article class="proof-card">
+          <div class="proof-company">McCarthy</div>
+          <h4 class="proof-stat">2 hr / wk saved per employee</h4>
+          <p class="proof-copy">With 80% adoption among 4k employees, Glean is the most adopted tool in the company, helping with the goal of accelerating bid-to-breaking-ground from 2 to 3 years down to 6 to 9 months.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="footer">Prepared as an LJA-style concept page using current LJA messaging, logo, and brand-inspired color cues.</div>
+  </main>
+</body>
+</html>
